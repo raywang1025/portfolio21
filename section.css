@@ -1,0 +1,14 @@
+.box  {
+  height:70px;
+  width: 100%;
+}
+.works {
+ width: 50%;
+ height: 200px;
+ float: left;
+}
+
+
+.clearfix {
+  clear: both;
+}
