@@ -1,14 +1,116 @@
-.box  {
-  height:70px;
-  width: 100%;
-}
-.works {
- width: 50%;
- height: 200px;
- float: left;
+.box {
+    height: 100px;
+    width: 100%;
+    background-color: white
 }
 
+
+/* container is here */
+
+.container {
+    min-width: 360px;
+    margin: 0 auto;
+}
+
+
+/* section is here */
+
+section {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.works {
+    width: 100%;
+    height: 300px;
+    display: inline-block;
+    position: relative;
+}
+
+
+/* cover is here, from opacity:0 to opacity:70% */
+
+.cover {
+    width: 100%;
+    position: absolute;
+    height: 300px;
+}
+
+.works:hover .cover {
+    background-color: #000;
+    opacity: 70%;
+    transition: 0.7s 0.2s;
+}
+
+.pt1111Img {
+    /* width: 300px; */
+    height: 300px;
+    background-image: url(../portfolio21/asset/1111pttime.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.photoImg {
+    /* width: 300px; */
+    height: 300px;
+    background-image: url(../portfolio21/asset/photo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* pseudo element is here */
+
+.pt1111Img::after {
+    content: "1111 Labor Human Resource Agency";
+    color: rgb(255, 255, 255);
+    width: 100%;
+    position: absolute;
+    left: 13%;
+    line-height: 9.5em;
+    font-size: 32px;
+    display: none;
+}
+
+.photoImg::after {
+    content: "Gallery and Photographer works";
+    color: rgb(255, 255, 255);
+    width: 100%;
+    position: absolute;
+    left: 18%;
+    line-height: 9.5em;
+    font-size: 32px;
+    display: none;
+}
+
+.pt1111Img:hover::after,
+.photoImg:hover::after {
+    display: block;
+}
+
+.works:hover {
+    transform: opacity(0.7);
+    transition: 0.5s;
+}
+
+@media screen and (man-width:680px) {
+    .works {
+        width: 100%;
+        float: left;
+    }
+}
+
+@media screen and (min-width:681px) and (max-width:1680px) {
+    .works {
+        width: 50%;
+        float: left;
+        position: relative;
+    }
+}
 
 .clearfix {
-  clear: both;
+    clear: both;
 }
